@@ -18,6 +18,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='index'),
+    path('create/', views.create, name='create'),
+    path('complete/<int:task_id>', views.complete, name='complete'),
+    path('delete/<int:task_id>', views.delete, name='delete'),
     path('admin/', admin.site.urls),
 ]
