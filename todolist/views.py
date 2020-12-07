@@ -8,8 +8,7 @@ from .forms import TaskForm
 
 def index(request):
     tasks = Task.objects.all()
-    forms = TaskForm()
-    return render(request, 'todolist/index.html', { 'tasks': tasks, 'forms': forms })
+    return render(request, 'todolist/index.html', { 'tasks': tasks })
 
 
 def create(request):
